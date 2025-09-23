@@ -5,7 +5,7 @@ import { Hero } from "../components/Hero";
 export function Home(){
     return (
     <>
-        <div>
+        <div className="min-h-screen">
             <Hero />
             <About />
             <Faq />

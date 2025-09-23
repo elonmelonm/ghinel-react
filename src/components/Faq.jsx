@@ -13,9 +13,9 @@ function AccordionItem({ index, isOpen, onToggle, question, answer }){
                     aria-controls={panelId}
                     aria-expanded={isOpen}
                     onClick={() => onToggle(index)}
-                    className="w-full h-[76px] flex items-center justify-between py-4 text-left text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                    className="w-full md:h-[76px] flex items-center justify-between py-4 text-left text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
                 >
-                    <span className="pr-6 text-[20px] font-medium">{question}</span>
+                    <span className="pr-6 text-[18px] md:text-[20px] font-medium">{question}</span>
                     <ChevronDownIcon
                         className={`w-5 h-5 transition-transform duration-200 ${isOpen ? "rotate-180" : "rotate-0"}`}
                         aria-hidden="true"
@@ -29,7 +29,7 @@ function AccordionItem({ index, isOpen, onToggle, question, answer }){
                 hidden={!isOpen}
                 className="pb-4 text-white/80"
             >
-                <p className="leading-7">{answer}</p>
+                <p className="text-[14px] leading-7">{answer}</p>
             </div>
         </div>
     )
@@ -74,8 +74,8 @@ export function Faq() {
 
     return (
         <>
-            <div className="flex flex-col justify-center items-center px-[272px] py-[48px] gap-[50px] ">
-                <p className="max-w-[829px] text-center text-white font-bold text-[48px] leading-[48px] ">Tout ce que vous devez savoir sur Ghinel</p>
+            <div className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-[100px] lg:px-[172px] xl:px-[272px] py-[48px] gap-[32px] md:gap-[50px] min-h-screen ">
+                <p className="max-w-[829px] text-center text-white font-bold text-[28px] md:text-[48px] leading-[38px] md:leading-[48px] ">Tout ce que vous devez savoir sur Ghinel</p>
                 <div className="w-full max-w-[829px] divide-y divide-white/10">
                     {faqs.map((item, idx) => (
                         <AccordionItem

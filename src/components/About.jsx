@@ -6,10 +6,10 @@ import GhinelHead from '../assets/GHinel_head.jpg'
 export function About(){
     return (
         <>
-            <div className="flex flex-col justify-center items-center px-20 py-[48px] gap-[124px] ">
+            <div className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 py-[48px] gap-[64px] md:gap-[124px] min-h-screen ">
                 <div className="flex flex-col items-center gap-8">
-                    <p className="text-white font-bold text-[48px] leading-[48px] ">Qu'est ce que Ghinel ?</p>
-                    <p className="max-w-[896px] leading-[29px] text-[18px] text-[#9CA3AF] text-center">
+                    <p className="text-white font-bold text-[28px] md:text-[48px] leading-[48px] ">Qu'est ce que Ghinel ?</p>
+                    <p className=" leading-[29px] text-[16px] md:text-[18px] text-muted text-center">
                         Dans un monde en constante évolution, la disparition progressive des trésors littéraires est un constat alarmant. 
                         Des œuvres précieuses comme Doguicimi de Paul Hazoumé ou L'esclave de Félix Couchoro se perdent dans l'ombre du temps. 
                         Ces livres ne sont pas seulement des pages reliées entre elles, mais des porteurs d'histoires, de valeurs et de cultures. 
@@ -19,97 +19,85 @@ export function About(){
                     </p>
                 </div>
                 <div className="flex flex-col items-center gap-6">
-                    <div className="flex flex-row gap-[48px] items-center">
+                    <div className="flex flex-col lg:flex-row gap-[24px] md:gap-[48px] items-center">
                         <div className="flex flex-col gap-[33px] ">
                             <div className="flex flex-col gap-[29px]">
-                                <p className="text-white font-bold text-[48px] leading-[48px] ">A chacun ses goûts !</p>
-                                <p className="max-w-[554px] leading-[29px] text-[18px] text-[#9CA3AF]">
+                                <p className="text-white font-bold text-[28px] md:text-[48px] leading-[48px] ">A chacun ses goûts !</p>
+                                <p className="max-w-[554px] leading-[29px] text-[16px] md:text-[18px] text-muted">
                                     Que vous soyez fans des romans, poèmes, nouvelles ; Ou encore, vous aimez la romance, l'humour ou le drame ; Vous trouverez un livre qui correspond à vos préférences.
                                 </p>
                             </div>
                             <div className="flex flex-col gap-6">
                                 <div className="flex flex-row gap-6">
-                                    <span className="w-[36px] h-[36px] bg-[#1F2937] flex justify-center items-center rounded-full">
-                                        <LockClosedIcon className="w-5 h-5 text-[#FB923C]" />
-                                    </span>
-                                    <div className="flex flex-col">
-                                        <p className="text-white font-bold text-[18px] leading-[48px] ">Accès Illimité</p>
-                                        <p className="max-w-[554px] leading-[29px] text-[16px] text-[#9CA3AF]">
+                                    <LockClosedIcon className="mt-1 w-5 h-5 text-brand" />
+                                    <div className="flex flex-col gap-1">
+                                        <p className="text-white font-bold text-[16px] md:text-[18px] ">Accès Illimité</p>
+                                        <p className="max-w-[554px] leading-[29px] text-[14px] md:text-[16px] text-muted">
                                         Abonnez-vous pour explorer une bibliothèque riche et diversifiée.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex flex-row gap-6">
-                                    <span className="w-[36px] h-[36px] bg-[#1F2937] flex justify-center items-center rounded-full">
-                                        <CheckIcon className="w-5 h-5 text-[#FB923C]" />
-                                    </span>
-                                    <div className="flex flex-col">
-                                        <p className="text-white font-bold text-[18px] leading-[48px] ">Découverte Culturelle</p>
-                                        <p className="max-w-[554px] leading-[29px] text-[16px] text-[#9CA3AF]">
+                                    <CheckIcon className="mt-1 w-5 h-5 text-brand" />
+                                    <div className="flex flex-col gap-1">
+                                        <p className="text-white font-bold text-[16px] md:text-[18px] ">Découverte Culturelle</p>
+                                        <p className="max-w-[554px] leading-[29px] text-[14px] md:text-[16px] text-muted">
                                             Plongez dans des contenus mettant en valeur la culture africaine.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex flex-row gap-6">
-                                    <span className="w-[36px] h-[36px] bg-[#1F2937] flex justify-center items-center rounded-full">
-                                        <ArrowTrendingUpIcon className="w-5 h-5 text-[#FB923C]" />
-                                    </span>
-                                    <div className="flex flex-col">
-                                        <p className="text-white font-bold text-[18px] leading-[48px] ">Accès Illimité</p>
-                                        <p className="max-w-[554px] leading-[29px] text-[16px] text-[#9CA3AF]">
+                                    <ArrowTrendingUpIcon className="mt-1 w-5 h-5 text-brand" />
+                                    <div className="flex flex-col gap-1">
+                                        <p className="text-white font-bold text-[16px] md:text-[18px] ">Accès Illimité</p>
+                                        <p className="max-w-[554px] leading-[29px] text-[14px] md:text-[16px] text-muted">
                                             Profitez de réductions exclusives sur les abonnements.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className=" p-1.5 w-[554px] h-full border border-yellow-500 rounded-lg ">
+                        <div className=" p-1.5 w-full md:w-[554px] h-full border border-brand rounded-lg ">
                             <img src={ImageLecteur} alt="" />
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col items-center gap-6">
-                    <div className="flex flex-row gap-[173px] items-center">
-                        <div className=" p-1.5 w-[554px] h-full border border-yellow-500 rounded-lg ">
+                    <div className="flex flex-col-reverse lg:flex-row gap-[24px] md:gap-[173px] items-center">
+                        <div className=" p-1.5 w-full md:w-[554px] h-full border border-yellow-500 rounded-lg ">
                             <img src={GhinelHead} alt="" />
                         </div>
                         <div className="flex flex-col gap-[33px] ">
                             <div className="flex max-w-[560px] flex-col gap-[29px]">
-                                <p className="text-white font-bold text-[48px] leading-[48px] ">Publier son livre, c'est facile</p>
-                                <p className="leading-[29px] text-[18px] text-[#9CA3AF]">
+                                <p className="text-white font-bold text-[28px] md:text-[48px] leading-[48px] ">Publier son livre, c'est facile</p>
+                                <p className="leading-[29px] text-[14px] md:text-[18px] text-muted">
                                     Vous voulez vous faire connaître en tant qu'auteur ? Ghinel vous aide à le faire gratuitement!!! A vos marques, prêts, attaquez vos plumes...
                                 </p>
                             </div>
                             <div className="flex flex-col gap-6">
                                 <div className="flex flex-row gap-6">
-                                    <span className="w-[36px] h-[36px] bg-[#1F2937] flex justify-center items-center rounded-full">
-                                        <RocketLaunchIcon className="w-5 h-5 text-[#FB923C]" />
-                                    </span>
-                                    <div className="flex flex-col">
-                                        <p className="text-white font-bold text-[18px] leading-[48px] ">Publiez Gratuitement</p>
-                                        <p className="max-w-[554px] leading-[29px] text-[16px] text-[#9CA3AF]">
+                                    <RocketLaunchIcon className="mt-1 w-5 h-5 text-brand" />
+                                    <div className="flex flex-col gap-1">
+                                        <p className="text-white font-bold text-[16px] md:text-[18px] ">Publiez Gratuitement</p>
+                                        <p className="max-w-[554px] leading-[29px] text-[14px] md:text-[16px] text-muted">
                                             Diffusez vos œuvres sans frais.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex flex-row gap-6">
-                                    <span className="w-[36px] h-[36px] bg-[#1F2937] flex justify-center items-center rounded-full">
-                                        <ArrowTrendingUpIcon className="w-5 h-5 text-[#FB923C]" />
-                                    </span>
-                                    <div className="flex flex-col">
-                                        <p className="text-white font-bold text-[18px] leading-[48px] ">Monétisez Vos Œuvres</p>
-                                        <p className="max-w-[554px] leading-[29px] text-[16px] text-[#9CA3AF]">
+                                    <ArrowTrendingUpIcon className="mt-1 w-5 h-5 text-brand" />
+                                    <div className="flex flex-col gap-1">
+                                        <p className="text-white py-0 font-bold text-[16px] md:text-[18px]">Monétisez Vos Œuvres</p>
+                                        <p className="max-w-[554px] leading-[29px] text-[14px] md:text-[16px] text-muted">
                                             Recevez des rémunérations pour vos publications.
                                         </p>
                                     </div>
                                 </div>
                                 <div className="flex flex-row gap-6">
-                                    <span className="w-[36px] h-[36px] bg-[#1F2937] flex justify-center items-center rounded-full">
-                                        <UsersIcon className="w-5 h-5 text-[#FB923C]" />
-                                    </span>
-                                    <div className="flex flex-col">
-                                        <p className="text-white font-bold text-[18px] leading-[48px] ">Rejoignez une Communauté</p>
-                                        <p className="max-w-[554px] leading-[29px] text-[16px] text-[#9CA3AF]">
+                                    <UsersIcon className="mt-1 w-5 h-5 text-brand" />
+                                    <div className="flex flex-col gap-1">
+                                        <p className="text-white font-bold text-[16px] md:text-[18px] ">Rejoignez une Communauté</p>
+                                        <p className="max-w-[554px] leading-[29px] text-[14px] md:text-[16px] text-muted">
                                             Connectez-vous avec d'autres écrivains passionnés.
                                         </p>
                                     </div>

@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Archivo", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  --color-brand: #efb034;         /* primaire */
+  --color-bg: #0f172a;            /* fond principal */
+  --color-surface: rgba(255,255,255,0.06); /* surface translucide */
+  --color-muted: #9ca3af;         /* texte secondaire */
+  --color-border: rgba(255,255,255,0.10);
+  --color-onBrand: #171a1f;       /* texte sur fond brand */
+  --color-border-strong: #374151; /* séparateurs forts */
+  --color-border-muted: #4B5563;  /* bordures input */
+  --color-surface-strong: #1F2937;/* puces, badges */
+  --color-placeholder: #BDC1CA;   /* placeholder inputs */
+}
+
+
+/* Helper class for glassmorphism surfaces */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: var(--color-surface);
+}
+
+/* Softer glass opacity for lighter look */
+.glass--soft {
+  background-color: rgba(255, 255, 255, 0.001);
+}
+

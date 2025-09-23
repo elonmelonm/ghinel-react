@@ -1,9 +1,10 @@
+import { Component404 } from "../components/Component404";
 
 export function Library(){
     return (
     <>
-        <div>
-            LIBRARY PAGE
+        <div className="min-h-screen flex items-center justify-center">
+            <Component404 />
         </div>
     </>
 )
