@@ -31,6 +31,13 @@ export function Header(){
                     </NavLink>
                     {" | "}
                     <NavLink
+                        to="/chatbot"
+                        className={({ isActive }) => `hover:text-brand ${isActive ? 'text-brand' : ''}`}
+                    >
+                        ChatBot
+                    </NavLink>
+                    {" | "}
+                    <NavLink
                         to="/about"
                         className={({ isActive }) => `hover:text-brand ${isActive ? 'text-brand' : ''}`}
                     >
@@ -79,6 +86,13 @@ export function Header(){
                             className={({ isActive }) => `hover:text-brand ${isActive ? 'text-brand' : ''}`}
                         >
                             Bibliothèque
+                        </NavLink>
+                        <NavLink
+                            to="/chatbot"
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className={({ isActive }) => `hover:text-brand ${isActive ? 'text-brand' : ''}`}
+                        >
+                            ChatBot
                         </NavLink>
                         <NavLink
                             to="/about"

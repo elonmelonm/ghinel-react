@@ -29,7 +29,7 @@ export function Footer(){
                 <div className="flex flex-col gap-3">
                     <p className="text-muted text-[16px] font-bold leading-[29px]  ">S'abonner à notre newsletter</p>
                     <div className="flex flex-row h-10 gap-2">
-                        <input className="w-full lg:min-w-[515px] h-full p-4 border border-[var(--color-border-muted)] placeholder-[var(--color-placeholder)] rounded-full" type="text" placeholder="Entre votre mail" />
+                        <input className="w-full lg:min-w-[515px] h-full text-white p-4 border border-[var(--color-border-muted)] placeholder-[var(--color-placeholder)] rounded-full" type="text" placeholder="Entre votre mail" />
                         <button className="bg-brand rounded-full hover:border hover:border-brand hover:bg-transparent hover:text-brand h-10 px-4 cursor-pointer">S'abonner</button>
                     </div>
                 </div>
