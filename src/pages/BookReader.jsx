@@ -103,7 +103,7 @@ export function BookReader() {
                 style={{ 
                     backdropFilter: 'blur(4px)',
                     WebkitBackdropFilter: 'blur(4px)',
-                    backgroundColor: 'rgba(0, 0, 0, 0.8)'
+                    // backgroundColor: 'rgba(0, 0, 0, 0.8)'
                 }}
             >
                 <div className="flex items-center gap-4">
@@ -138,7 +138,7 @@ export function BookReader() {
 
             {/* Menu mobile overlay */}
             {showSidebar && isMobile && (
-                <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={toggleSidebar}>
+                <div className="fixed inset-0 bg- z-40 lg:hidden" onClick={toggleSidebar}>
                     <div 
                         className="fixed right-0 top-0 h-full w-80 bg-surface/95 backdrop-blur-sm p-6 transform transition-transform duration-300"
                         style={{ 
@@ -197,7 +197,7 @@ export function BookReader() {
                     style={{ 
                         backdropFilter: 'blur(4px)',
                         WebkitBackdropFilter: 'blur(4px)',
-                        backgroundColor: 'rgba(0, 0, 0, 0.7)'
+                        // backgroundColor: 'rgba(0, 0, 0, 0.7)'
                     }}
                 >
                     <div className="space-y-4">
