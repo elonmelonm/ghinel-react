@@ -8,7 +8,7 @@ export function Header(){
     const [menuOpen, setMenuOpen] = useState(false);
     return (
     <>
-        <nav className="sticky top-0 z-50 w-full h-[88px] border-b border-white/10 rounded-b-3xl px-4 sm:px-8 md:px-16 flex justify-center glass glass--soft">
+        <nav className="sticky top-0 z-50 w-full h-[88px] border-b border-white/10 rounded-b-3xl px-4 sm:px-8 md:px-16 flex justify-center glass ">
             <div className="w-full max-w-[1280px] mx-auto flex flex-row justify-between items-center text-white">
                 {/* logo */}
                 <div className="flex flex-row items-center gap-2">
