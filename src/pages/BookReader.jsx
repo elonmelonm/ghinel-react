@@ -224,8 +224,7 @@ export function BookReader() {
                                 
                                 <p className="text-sm text-gray-400 leading-relaxed">{book.description}</p>
                             </div>
-                        </div>
-                    </div>
+                            </motion.div>
                         </motion.div>
                     </motion.div>
                 )}
