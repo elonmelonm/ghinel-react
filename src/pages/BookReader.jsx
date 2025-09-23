@@ -98,7 +98,14 @@ export function BookReader() {
     return (
         <div className="min-h-screen bg-background flex flex-col">
             {/* Header du lecteur */}
-            <div className="flex items-center justify-between p-4 border-b border-surface bg-background/95 backdrop-blur-sm flex-shrink-0">
+            <div 
+                className="flex items-center justify-between p-4 border-b border-surface bg-background/95 backdrop-blur-sm flex-shrink-0" 
+                style={{ 
+                    backdropFilter: 'blur(4px)',
+                    WebkitBackdropFilter: 'blur(4px)',
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)'
+                }}
+            >
                 <div className="flex items-center gap-4">
                     <button
                         onClick={() => navigate('/library')}
@@ -132,7 +139,14 @@ export function BookReader() {
             {/* Menu mobile overlay */}
             {showSidebar && isMobile && (
                 <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={toggleSidebar}>
-                    <div className="fixed right-0 top-0 h-full w-80 bg-surface/95 backdrop-blur-sm p-6 transform transition-transform duration-300">
+                    <div 
+                        className="fixed right-0 top-0 h-full w-80 bg-surface/95 backdrop-blur-sm p-6 transform transition-transform duration-300"
+                        style={{ 
+                            backdropFilter: 'blur(8px)',
+                            WebkitBackdropFilter: 'blur(8px)',
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)'
+                        }}
+                    >
                         <div className="space-y-4">
                             <div className="flex justify-between items-center mb-4">
                                 <h3 className="text-lg font-bold text-white">Informations</h3>
@@ -178,7 +192,14 @@ export function BookReader() {
             {/* Contenu principal */}
             <div className="flex-1 flex overflow-hidden">
                 {/* Sidebar avec informations du livre - Masquée sur mobile/tablette */}
-                <div className={`w-80 bg-surface/50 border-r border-surface p-6 transition-transform duration-300 ${showSidebar ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 hidden lg:block`}>
+                <div 
+                    className={`w-80 bg-surface/50 border-r border-surface p-6 transition-transform duration-300 ${showSidebar ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 hidden lg:block`}
+                    style={{ 
+                        backdropFilter: 'blur(4px)',
+                        WebkitBackdropFilter: 'blur(4px)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)'
+                    }}
+                >
                     <div className="space-y-4">
                         <img 
                             src={book.cover} 
