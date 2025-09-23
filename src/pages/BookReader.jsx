@@ -4,6 +4,7 @@ import { XMarkIcon, BookOpenIcon, LanguageIcon, Bars3Icon } from "@heroicons/rea
 import { ReactReader } from "react-reader";
 import { getBook, getLanguageName } from "../data/books.js";
 import { useMobileDetection } from "../hooks/useMobileDetection";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function BookReader() {
     const { id } = useParams();
@@ -96,24 +97,37 @@ export function BookReader() {
     }
 
     return (
-        <div className="min-h-screen bg-background flex flex-col">
+        <motion.div 
+            className="min-h-screen bg-background flex flex-col"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             {/* Header du lecteur */}
-            <div 
+            <motion.div 
                 className="flex items-center justify-between p-4 border-b border-surface bg-background/95 backdrop-blur-sm flex-shrink-0" 
                 style={{ 
                     backdropFilter: 'blur(4px)',
                     WebkitBackdropFilter: 'blur(4px)',
                     // backgroundColor: 'rgba(0, 0, 0, 0.8)'
                 }}
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
             >
                 <div className="flex items-center gap-4">
-                    <button
+                    <motion.button
                         onClick={() => navigate('/library')}
                         className="flex items-center gap-2 text-brand hover:text-brand/80 transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        initial={{ x: -20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.3 }}
                     >
                         <XMarkIcon className="w-5 h-5" />
                         <span className={isMobile ? 'hidden' : ''}>Retour</span>
-                    </button>
+                    </motion.button>
                 </div>
                 
                 <div className="flex items-center gap-4">
@@ -126,34 +140,61 @@ export function BookReader() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <button
+                    <motion.button
                         onClick={toggleSidebar}
                         className="flex items-center gap-2 px-4 py-2 border border-surface text-white rounded-lg hover:bg-surface/20 transition-colors"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        initial={{ x: 20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.4, delay: 0.4 }}
                     >
                         <Bars3Icon className="w-4 h-4" />
                         <span className={isMobile ? 'hidden' : ''}>Informations</span>
-                    </button>
+                    </motion.button>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Menu mobile overlay */}
-            {showSidebar && isMobile && (
-                <div className="fixed inset-0 bg- z-40 lg:hidden" onClick={toggleSidebar}>
-                    <div 
-                        className="fixed right-0 top-0 h-full w-80 bg-surface/95 backdrop-blur-sm p-6 transform transition-transform duration-300"
-                        style={{ 
-                            backdropFilter: 'blur(8px)',
-                            WebkitBackdropFilter: 'blur(8px)',
-                            backgroundColor: 'rgba(0, 0, 0, 0.9)'
-                        }}
+            <AnimatePresence>
+                {showSidebar && isMobile && (
+                    <motion.div 
+                        className="fixed inset-0 bg-black/50 z-40 lg:hidden" 
+                        onClick={toggleSidebar}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
                     >
-                        <div className="space-y-4">
-                            <div className="flex justify-between items-center mb-4">
-                                <h3 className="text-lg font-bold text-white">Informations</h3>
-                                <button onClick={toggleSidebar} className="text-white hover:text-gray-300">
-                                    <XMarkIcon className="w-6 h-6" />
-                                </button>
-                            </div>
+                        <motion.div 
+                            className="fixed right-0 top-0 h-full w-80 bg-surface/95 backdrop-blur-sm p-6"
+                            style={{ 
+                                backdropFilter: 'blur(8px)',
+                                WebkitBackdropFilter: 'blur(8px)',
+                                backgroundColor: 'rgba(0, 0, 0, 0.9)'
+                            }}
+                            initial={{ x: 320, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            exit={{ x: 320, opacity: 0 }}
+                            transition={{ duration: 0.4, type: "spring", damping: 25 }}
+                        >
+                            <motion.div 
+                                className="space-y-4"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                            >
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-lg font-bold text-white">Informations</h3>
+                                    <motion.button 
+                                        onClick={toggleSidebar} 
+                                        className="text-white hover:text-gray-300"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                    >
+                                        <XMarkIcon className="w-6 h-6" />
+                                    </motion.button>
+                                </div>
                             <img 
                                 src={book.cover} 
                                 alt={book.title}
@@ -185,9 +226,10 @@ export function BookReader() {
                             </div>
                         </div>
                     </div>
-                </div>
-            )}
-
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Contenu principal */}
             <div className="flex-1 flex overflow-hidden">
@@ -309,6 +351,6 @@ export function BookReader() {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

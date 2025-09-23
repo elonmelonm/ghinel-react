@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ArrowLeftIcon, LanguageIcon, BookOpenIcon } from "@heroicons/react/24/outline";
 import { getBook, getLanguageName } from "../data/books.js";
+import { motion } from "framer-motion";
 
 export function BookDetail() {
     const { id } = useParams();
@@ -47,29 +48,53 @@ export function BookDetail() {
 
 
     return (
-        <div className="min-h-screen bg-background">
+        <motion.div 
+            className="min-h-screen bg-background"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+        >
             {/* Header avec bouton retour */}
-            <div className="flex items-center justify-between p-4 sm:p-6 md:p-8">
-                <button 
+            <motion.div 
+                className="flex items-center justify-between p-4 sm:p-6 md:p-8"
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+            >
+                <motion.button 
                     onClick={() => navigate('/library')}
                     className="flex items-center gap-2 text-brand hover:text-brand/80 transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                 >
                     <ArrowLeftIcon className="w-5 h-5" />
                     <span>Retour à la bibliothèque</span>
-                </button>
-            </div>
+                </motion.button>
+            </motion.div>
 
-            <div className="px-4 sm:px-6 md:px-8 pb-8">
+            <motion.div 
+                className="px-4 sm:px-6 md:px-8 pb-8"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+            >
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Image de couverture */}
-                        <div className="flex justify-center lg:justify-start">
-                            <img 
+                        <motion.div 
+                            className="flex justify-center lg:justify-start"
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        >
+                            <motion.img 
                                 src={book.cover} 
                                 alt={book.title}
                                 className="w-full max-w-md h-auto rounded-lg shadow-lg"
+                                whileHover={{ scale: 1.05 }}
+                                transition={{ duration: 0.3 }}
                             />
-                        </div>
+                        </motion.div>
 
                         {/* Informations du livre */}
                         <div className="flex flex-col gap-6">
@@ -130,7 +155,7 @@ export function BookDetail() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
