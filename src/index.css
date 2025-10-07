@@ -134,6 +134,32 @@
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+/* Force bg-surface to work in build - CRITICAL */
+.bg-surface {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.bg-surface\/50 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.bg-surface\/20 {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.bg-surface\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Force hover states */
+.hover\:bg-surface:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.hover\:bg-surface\/20:hover {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
 /* Production-ready surface classes */
 .surface-translucent {
   background-color: rgba(255, 255, 255, 0.1) !important;
@@ -162,5 +188,37 @@
 .surface-bg-strong {
   /* These classes must be preserved in build */
   display: block;
+}
+
+/* ULTIMATE FALLBACK - Force all possible surface classes */
+.bg-surface,
+.bg-surface\/50,
+.bg-surface\/20,
+.bg-surface\/95,
+.bg-surface\/10,
+.bg-surface\/5,
+.bg-surface\/30,
+.bg-surface\/40,
+.bg-surface\/60,
+.bg-surface\/70,
+.bg-surface\/80,
+.bg-surface\/90 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Force backdrop-filter to work in build */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+.backdrop-blur-md {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
 }
 
