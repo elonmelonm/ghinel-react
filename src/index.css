@@ -5,7 +5,7 @@
 
   --color-brand: #efb034;         /* primaire */
   --color-bg: #0f172a;            /* fond principal */
-  --color-surface: rgba(255,255,255,0.4); /* surface translucide */
+  --color-surface: rgba(255,255,255,0.1); /* surface translucide */
   --color-muted: #9ca3af;         /* texte secondaire */
   --color-border: rgba(255,255,255,0.10);
   --color-onBrand: #171a1f;       /* texte sur fond brand */
@@ -18,13 +18,54 @@
 
 /* Helper class for glassmorphism surfaces */
 .glass {
+  /* Fallback for browsers that don't support backdrop-filter */
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Modern browsers with backdrop-filter support */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background-color: var(--color-surface);
+  
+  /* Ensure the glass effect works in build */
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Softer glass opacity for lighter look */
 .glass--soft {
-  background-color: rgba(255, 255, 255, 0.001);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Enhanced glass effect with better browser support */
+.glass--enhanced {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Fallback glass effect for older browsers */
+@supports not (backdrop-filter: blur(12px)) {
+  .glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  }
+  
+  .glass--soft {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Ensure glass effect works in production builds */
+.glass,
+.glass--soft,
+.glass--enhanced {
+  will-change: backdrop-filter;
+  transform: translateZ(0);
 }
 
