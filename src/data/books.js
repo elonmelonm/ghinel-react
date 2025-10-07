@@ -2,7 +2,7 @@ export const books = [
   {
     id: 1,
     title: "Le monde est mon langage",
-    cover: "https://images.unsplash.com/photo-1516410529446-2c777cb7366d",
+    cover: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/cover/le-monde-est-mon-langage.jpeg",
     author: "Alain Mabanckou",
     languages: {
       fr: "https://standardebooks.org/ebooks/alexandre-dumas/the-three-musketeers/lewis-paget/epub/alexandre-dumas_the-three-musketeers.epub",
@@ -26,7 +26,7 @@ export const books = [
   {
     id: 2,
     title: "La puissance de l'auto-éducation",
-    cover: "https://images.unsplash.com/photo-1516410529446-2c777cb7366d",
+    cover: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/cover/la-puissance-de-l-auto-education.jpeg",
     author: "Simon Ouedraogo",
     languages: {
       fr: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/724768817-La-puissance-de-l-auto-e-ducation.epub",
@@ -50,7 +50,7 @@ export const books = [
   {
     id: 4,
     title: "Mémoires de Porc-Épic",
-    cover: "https://images.unsplash.com/photo-1516410529446-2c777cb7366d",
+    cover: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/cover/memoires-de-porc-et-epic.jpeg",
     author: "Alain Mabanckou",
     languages: {
       fr: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/Alain%20Mabanckou%20-%20Memoires%20de%20Porc-epic-%20Jericho.epub",
@@ -62,7 +62,7 @@ export const books = [
   // {
   //   id: 5,
   //   title: "Verre Cassé",
-  //   cover: "https://images.unsplash.com/photo-1529354235303-cc42f23d767a",
+  //   cover: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/cover/verre-cassee.jpeg",
   //   author: "Alain Mabanckou",
   //   languages: {
   //     fr: "/epubs/Alain Mabanckou, 2005, Verre Cassé, Paris, Seuil.epub",
@@ -74,7 +74,7 @@ export const books = [
   {
     id: 6,
     title: "Le Sanglot de l'homme noir",
-    cover: "https://images.unsplash.com/photo-1589998059171-988d887df646",
+    cover: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/cover/le-sanglot-de-l-homme-noir.jpeg",
     author: "Alain Mabanckou",
     languages: {
       fr: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/Alain%20Mabanckou,2012,%20Le%20Sanglot%20de%20l'homme%20noir,%20Paris,Fayard.epub",
@@ -122,7 +122,7 @@ export const books = [
   {
     id: 10,
     title: "Cent ans de solitude",
-    cover: "https://images.unsplash.com/photo-1589998059171-988d887df646",
+    cover: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/cover/cent-ans-de-sollitude.jpeg",
     author: "Gabriel García Márquez",
     languages: {
       fr: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/cent-ans-de-solitude-gabriel-garcia-marquez.epub",
