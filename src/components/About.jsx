@@ -1,12 +1,18 @@
-import { ArrowRightIcon, ArrowTrendingUpIcon, CheckIcon, HeartIcon, LockClosedIcon, RocketLaunchIcon, UsersIcon } from "@heroicons/react/24/outline"
+import { ArrowRightIcon, ArrowTrendingUpIcon, CheckIcon, HeartIcon, LockClosedIcon, RocketLaunchIcon, UsersIcon, BookOpenIcon } from "@heroicons/react/24/outline"
+import { useNavigate } from "react-router-dom"
 import Image from '../assets/ghinel_2.jpeg'
 import ImageLecteur from '../assets/lecteurs.jpeg'
 import GhinelHead from '../assets/GHinel_head.jpg'
 
 export function About(){
+    const navigate = useNavigate();
+
+    const goToLibrary = () => {
+        navigate('/library');
+    };
     return (
         <>
-            <div className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 py-[48px] gap-[64px] md:gap-[124px] min-h-screen ">
+            <div id="about-section" className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 py-[48px] gap-[64px] md:gap-[124px] min-h-screen ">
                 <div className="flex flex-col items-center gap-8">
                     <p className="text-white font-bold text-[28px] md:text-[48px] leading-[48px] ">Qu'est ce que Ghinel ?</p>
                     <p className=" leading-[29px] text-[16px] md:text-[18px] text-muted text-center">
@@ -105,6 +111,26 @@ export function About(){
                             </div>
                         </div>
                     </div>
+                </div>
+
+                {/* Call to Action - Bibliothèque */}
+                <div className="flex flex-col items-center gap-6 text-center">
+                    <div className="flex items-center gap-3">
+                        <BookOpenIcon className="w-6 h-6 text-brand" />
+                        <h3 className="text-brand font-bold text-xl">Découvrez notre bibliothèque</h3>
+                    </div>
+                    
+                    <p className="max-w-2xl leading-relaxed text-white/80 text-sm">
+                        Explorez notre collection de livres africains et découvrez des œuvres littéraires qui racontent l'histoire de notre continent.
+                    </p>
+
+                    <button
+                        onClick={goToLibrary}
+                        className="flex items-center gap-3 px-6 py-3 bg-brand text-onBrand rounded-full hover:bg-brand/80 transition-all duration-300 font-medium"
+                    >
+                        <span>Explorer la bibliothèque</span>
+                        <ArrowRightIcon className="w-4 h-4" />
+                    </button>
                 </div>
             </div>
         </>
