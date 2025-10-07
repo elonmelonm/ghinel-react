@@ -33,5 +33,21 @@ export default {
     'bg-surface/50',
     'bg-surface/90',
     'bg-brand/90',
+    // Surface classes that must be preserved
+    'surface-bg',
+    'surface-bg-soft',
+    'surface-bg-strong',
+    'surface-translucent',
+    'surface-translucent-soft',
+    'surface-translucent-strong',
+    'bg-surface',
+    'bg-surface/50',
+    'bg-surface/20',
+    'bg-white/10',
+    'bg-white/5',
+    'bg-white/20',
+    'glass',
+    'glass--soft',
+    'glass--enhanced',
   ]
 }
