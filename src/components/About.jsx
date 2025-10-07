@@ -6,7 +6,7 @@ import GhinelHead from '../assets/GHinel_head.jpg'
 export function About(){
     return (
         <>
-            <div id="about-section" className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 py-[48px] gap-[64px] md:gap-[124px] min-h-screen ">
+            <div className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-20 py-[48px] gap-[64px] md:gap-[124px] min-h-screen ">
                 <div className="flex flex-col items-center gap-8">
                     <p className="text-white font-bold text-[28px] md:text-[48px] leading-[48px] ">Qu'est ce que Ghinel ?</p>
                     <p className=" leading-[29px] text-[16px] md:text-[18px] text-muted text-center">

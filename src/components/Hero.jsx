@@ -1,16 +1,13 @@
 import { ArrowRightIcon,  } from "@heroicons/react/24/outline"
 import Image from '../assets/ghinel_2.jpeg'
 import { HeartIcon } from "@heroicons/react/24/solid"
+import { useNavigate } from "react-router-dom"
 
 export function Hero(){
-    const scrollToAbout = () => {
-        const aboutSection = document.getElementById('about-section');
-        if (aboutSection) {
-            aboutSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+    const navigate = useNavigate();
+
+    const goToLibrary = () => {
+        navigate('/library');
     };
 
     return (
@@ -31,7 +28,7 @@ export function Hero(){
 
                     </p>
                     <button 
-                        onClick={scrollToAbout}
+                        onClick={goToLibrary}
                         className="flex justify-center hover:bg-transparent hover:border-[2px] hover:border-white hover:text-white font-medium items-center w-[220px] sm:w-[245px] h-[44px] sm:h-[48px] text-base sm:text-[18px] gap-3 sm:gap-4 bg-white text-onBrand mt-5 px-4 py-2 rounded-full cursor-pointer transition-all duration-300"
                     >
                         <span>Découvrir Ghinel</span>
