@@ -131,18 +131,18 @@ export const books = [
     },
     description: "Ce classique de la littérature hispano-américaine suit l'histoire de la famille Buendía dans le village fictif de Macondo sur plusieurs générations. À travers un récit mêlant réalisme et éléments fantastiques, il explore des thèmes comme la solitude, la mémoire et le destin familial."
   },
-  {
-    id: 11,
-    title: "Apport de l'Afrique à la civilisation universelle",
-    cover: "https://images.unsplash.com/photo-1589998059171-988d887df646",
-    author: "Cheikh Anta Diop",
-    languages: {
-      fr: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/Cheikh%20Anta%20Diop%20Apport%20Afrique%20Civilisation-1%2066062.epub",
-      en: "/epubs/lumieres-en.pdf",
-      arabe: "/epubs/lumieres-arabe.pdf"
-    },
-    description: "Cet essai met en lumière l'impact de l'Afrique sur la civilisation mondiale en déconstruisant les préjugés historiques et en démontrant les contributions africaines aux sciences, à la philosophie et à la culture à travers les âges."
-  },
+  // {
+  //   id: 11,
+  //   title: "Apport de l'Afrique à la civilisation universelle",
+  //   cover: "https://images.unsplash.com/photo-1589998059171-988d887df646",
+  //   author: "Cheikh Anta Diop",
+  //   languages: {
+  //     fr: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/Cheikh%20Anta%20Diop%20Apport%20Afrique%20Civilisation-1%2066062.epub",
+  //     en: "/epubs/lumieres-en.pdf",
+  //     arabe: "/epubs/lumieres-arabe.pdf"
+  //   },
+  //   description: "Cet essai met en lumière l'impact de l'Afrique sur la civilisation mondiale en déconstruisant les préjugés historiques et en démontrant les contributions africaines aux sciences, à la philosophie et à la culture à travers les âges."
+  // },
   // {
   //   id: 12,
   //   title: "Côte occidentale d'Afrique Côte-d'Or",
