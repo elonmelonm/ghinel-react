@@ -1,7 +1,18 @@
 import { ArrowRightIcon,  } from "@heroicons/react/24/outline"
 import Image from '../assets/ghinel_2.jpeg'
 import { HeartIcon } from "@heroicons/react/24/solid"
+
 export function Hero(){
+    const scrollToAbout = () => {
+        const aboutSection = document.getElementById('about-section');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <>
             <div className="flex flex-col justify-center items-center px-4 sm:px-8 md:px-[100px] py-[40px] xl:py-[60px] gap-10 md:gap-20 lg:gap-24 min-h-screen ">
@@ -19,7 +30,10 @@ export function Hero(){
                         Nous sommes bien plus qu'une <br className="hidden lg:block" /> bibliothèque ; nous sommes les gardiens passionnés du patrimoine littéraire africain, dévoués à <br className="hidden lg:block" /> préserver, promouvoir et partager les trésors des plumes émergentes.
 
                     </p>
-                    <button className="flex justify-center hover:bg-transparent hover:border-[2px] hover:border-white hover:text-white font-medium items-center w-[220px] sm:w-[245px] h-[44px] sm:h-[48px] text-base sm:text-[18px] gap-3 sm:gap-4 bg-white text-onBrand mt-5 px-4 py-2 rounded-full cursor-pointer">
+                    <button 
+                        onClick={scrollToAbout}
+                        className="flex justify-center hover:bg-transparent hover:border-[2px] hover:border-white hover:text-white font-medium items-center w-[220px] sm:w-[245px] h-[44px] sm:h-[48px] text-base sm:text-[18px] gap-3 sm:gap-4 bg-white text-onBrand mt-5 px-4 py-2 rounded-full cursor-pointer transition-all duration-300"
+                    >
                         <span>Découvrir Ghinel</span>
                         <ArrowRightIcon className="w-4 h-4" />
                     </button>
