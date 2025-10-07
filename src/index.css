@@ -5,7 +5,7 @@
 
   --color-brand: #efb034;         /* primaire */
   --color-bg: #0f172a;            /* fond principal */
-  --color-surface: rgba(255,255,255,0.06); /* surface translucide */
+  --color-surface: rgba(255,255,255,0.1); /* surface translucide */
   --color-muted: #9ca3af;         /* texte secondaire */
   --color-border: rgba(255,255,255,0.10);
   --color-onBrand: #171a1f;       /* texte sur fond brand */
