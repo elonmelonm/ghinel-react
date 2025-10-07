@@ -54,8 +54,8 @@ export const books = [
     author: "Alain Mabanckou",
     languages: {
       fr: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/Alain%20Mabanckou%20-%20Memoires%20de%20Porc-epic-%20Jericho.epub",
-      en: "/epubs/terre-ebene-en.pdf",
-      wolof: "/epubs/terre-ebene-wolof.pdf"
+      en: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/english/Alain%20Mabanckou%20-%20Memoires%20de%20Porc-epic-%20Jericho_anglais.epub",
+      yoruba: "https://hkakwdixpcvfurzxvzqt.supabase.co/storage/v1/object/public/epub-files/yoruba/Alain%20Mabanckou%20-%20Memoires%20de%20Porc-epic-%20Jericho%20_yoruba.epub"
     },
     description: "Inspiré d'une légende africaine, ce roman raconte l'histoire d'un porcépic « double nuisible » d'un humain, qui se confesse après la mort de son maître. Il propose une réflexion sur la dualité du bien et du mal, le destin et les croyances ancestrales."
   },
